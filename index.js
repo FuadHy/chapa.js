@@ -1,5 +1,5 @@
 /**
- * UnOfficial node.js library for Chapa API
+ * Unofficial node.js library for Chapa API
  */
 
  const fetch = require('node-fetch')
@@ -53,8 +53,7 @@
          fetch(BASE_URL + VERIFY_PATH + txnRef, {
              method: 'get',
              headers: {
-                 'Content-Type': 'application/json',
-                 'Authorization': 'Bearer ' + this.secret_key
+                 'Content-Type': 'application/json'
              }
          }).then(async response => {
              if(response.status != 200) return reject(await response.json())
