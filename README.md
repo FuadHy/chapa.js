@@ -1,4 +1,4 @@
-# UnOfficial Promise based Chapa API library for node js
+# Unofficial Promise based Chapa API library for node js
 
 ```bash
 $ npm install chapa
