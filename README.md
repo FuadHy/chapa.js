@@ -10,6 +10,7 @@ $ npm install chapa
 const Chapa = require('chapa')
 
 const myChapa = new Chapa('secret-key')
+
 const customerInfo =  {
   'amount': '100',
   'currency': 'ETB',
