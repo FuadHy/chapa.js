@@ -53,7 +53,7 @@
          fetch(BASE_URL + VERIFY_PATH + txnRef, {
              method: 'get',
              headers: {
-                 'Content-Type': 'application/json'
+                'Authorization': 'Bearer ' + this.secret_key
              }
          }).then(async response => {
              if(response.status != 200) return reject(await response.json())
