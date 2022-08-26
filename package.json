@@ -4,6 +4,7 @@
   "description": "Chapa API library for node.js",
   "main": "index.js",
   "homepage": "https://github.com/fuadhy/chapa.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,6 +15,7 @@
   "author": "fuadhy",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.1",
     "node-fetch": "^2.6.7"
   }
 }
