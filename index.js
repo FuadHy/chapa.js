@@ -17,6 +17,25 @@ export class Chapa {
    * @returns Promise
    */
   initialize(data) {
+    let required_fields = [
+      "amount",
+      "currency",
+      "email",
+      "first_name",
+      "last_name",
+      "tx_ref",
+    ];
+
+    let errors = [];
+
+    required_fields.forEach((field) => {
+      if (!data[field]) errors.push(field + " is required!");
+    });
+
+    if (errors.length > 0) {
+      throw new Error(JSON.stringify({ Error: errors }));
+    }
+
     return new Promise((resolve, reject) => {
       fetch(BASE_URL + "/initialize", {
         method: "post",
